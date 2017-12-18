@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>UT3- Ejercicio 16 Juan Carlos Pastor Regueras/title>
+</head>
+<body>
+  
+  <script>
+   function fechaMia(dia,mes,anyo){
+		
+		var mesAux;
+		
+		switch(mes){
+			case 1:
+				mesAux = "Enero";
+				break;
+			case 2:
+				mesAux = "Febrero";
+				break;
+			case 3:
+				mesAux = "Marzo";
+				break;
+			case 4:
+				mesAux = "Abril";
+				break;
+			case 5:
+				mesAux = "Mayo";
+				break;
+			case 6:
+				mesAux = "Junio";
+				break;
+			case 7:
+				mesAux = "Julio";
+				break;
+			case 8:
+				mesAux = "Agosto";
+				break;
+			case 9:
+				mesAux = "Septiembre";
+				break;
+			case 10:
+				mesAux = "Octubre";
+				break;
+			case 11:
+				mesAux = "Noviembre";
+				break;
+			case 12:
+				mesAux = "Diciembre";
+				break;
+		}
+		
+		document.write("Hoy es "+ dia + " de " + mesAux + " de " + anyo);
+		
+   }
+   
+   var dia = prompt("Introduzca dia");
+   var mes = prompt("Introduzca mes");
+   var anyo = prompt("Introduzca año");
+   fechaMia(dia,parseInt(mes),anyo);
+	
+  </script>
+  
+ 
+</body>
+</html>

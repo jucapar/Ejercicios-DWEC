@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>UT3- Ejercicio 15 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+  <script>
+    
+	function NumeroPrimo(num){
+		var primo = true;
+		for(let i=2;i<=num/2 && primo;i++){
+			if(num % i == 0){
+				primo = false;
+			}
+		}
+		
+		if(primo){
+			document.write("Es primo");
+		}
+		else{
+			document.write("No es primo");
+		}
+	}
+	var numero;
+	do{
+		numero = prompt("Introduzca un numero")
+	}while(isNaN(parseInt(numero)))
+	
+	NumeroPrimo(numero);
+  </script>
+  
+ 
+</body>
+</html>

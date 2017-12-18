@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UT3- Ejercicio 8 Juan Carlos Pastor Regueras</title>
+</head>
+
+<body>
+    <p id="texto">
+        Hola 
+        
+    </p>
+    
+   <input type="button" onClick="rojo();" value="Rojo" />
+   <input type="button" onClick="verde();" value="Verde" />
+   <input type="button" onClick="azul();" value="Azul" />
+   <input type="button" onClick="amarillo();" value="Amarillo" />
+   <input type="button" onClick="naranja();" value="Naranja" />
+
+    <script>
+        
+        function rojo(){
+            
+            document.getElementById("texto").style.backgroundColor="red";
+        }
+        
+        
+        function verde(){
+            
+            document.getElementById("texto").style.backgroundColor="green";
+        }
+        
+        function azul(){
+            document.getElementById("texto").style.backgroundColor="blue";
+        }
+        
+        function amarillo(){
+            document.getElementById("texto").style.backgroundColor="yellow";
+        }
+        
+        function naranja(){
+            document.getElementById("texto").style.backgroundColor="orange";
+        }
+        
+    </script>    
+</body>
+
+</html>

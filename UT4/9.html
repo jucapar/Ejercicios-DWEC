@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 9 Juan Carlos Pastor Regueras</title>
+</head>
+	
+    <body>
+	
+		
+		<form>
+			<fieldset>
+				<legend>Tickets and Add-ons</legend>
+				Number of ticks Limit 8
+				<input type="number" name="numTickets" id="numTickets"  /><br />
+				Dinner Packages Serves 2
+				<input type="number" name="dinnerPackages" id="dinnerPackages" value="1" />
+				
+			</fieldset>
+			
+			<fieldset>
+				<legend>Payment</legend>
+				Credit card number No spaces or dashes, please
+				<input type="text" name="creditCard" id="creditCard" /><br />
+				Expiration date MM/MMYYYY
+				<input type="text" name="expirationDate" id="expirationDate" /><br />
+				
+				
+			</fieldset>
+			
+			<fieldset>
+				<legend>Billing Address</legend>
+				
+				Name
+				<input type="text" name="name" id="name" /><br />
+				Street Address
+				<input type="text" name="address" id="address" /><a id="texto"></a><br />
+				City
+				<input type="text" name="city" id="city" /><br />
+				State
+				<input type="text" name="state" id="state" /><br />
+				ZIP
+				<input type="text" name="zip" id="zip" /><br />
+				
+			</fieldset>
+			<input type="submit" value="Buy Tickets" name="enviar"/>
+		</form>
+		
+		      
+    </body>
+	
+	<script>
+	
+		
+		var numTickets = document.getElementById("numTickets");
+		numTickets.setAttribute("value","1");
+		numTickets.setAttribute("min","1");
+		numTickets.setAttribute("max","10");
+		
+		var dinnerPackages= document.getElementById("dinnerPackages");
+		dinnerPackages.setAttribute("value","1");
+		dinnerPackages.setAttribute("min","1");
+		dinnerPackages.setAttribute("max","200");
+		dinnerPackages.setAttribute("step","0.5");      
+		
+		var address = document.getElementById("address");
+		
+		address.addEventListener("blur", function(){
+			var direccion = address.value.split(" ");
+			console.log(direccion);
+			var texto = "";
+			switch(direccion[0]){
+			
+				case "c/":
+					texto = document.getElementById("texto");
+					console.log(texto);
+					texto.innerHTML = "Calle";
+				break;
+				
+				
+				case "avd":
+				texto = document.getElementById("texto");
+					console.log(texto);
+					texto.innerHTML = "Avenida";
+				break;
+				
+				
+				case "pza":
+					texto = document.getElementById("texto");
+					console.log(texto);
+					texto.innerHTML = "Plaza";
+				break;
+			
+			}
+			
+			
+		});
+		
+		
+		
+	</script>
+
+</html>

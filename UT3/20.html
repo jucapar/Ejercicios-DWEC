@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+  <title>UT3- Ejercicio 20 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+	<script>
+		
+		/*Definir objeto: PuertoSerie
+			Puerto serie:       MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]
+			[to=on|off] [xon=on|off] [odsr=on|off]
+			[octs=on|off] [dtr=on|off|hs]
+			[rts=on|off|hs|tg] [idsr=on|off]
+		*/
+		function PuertoSerie(){
+			this.baud = "";
+			this.parity = "";
+			this.data = "";
+			this.stop = "";
+			this.to = "";
+			this.xon = "";
+			this.odsr = "";
+			this.octs = "";
+			this.dtr = "";
+			this.rts = "";
+			this.idsr = "";
+		}
+		
+		
+		/*
+			Definir el objeto: ModoPuerto
+			Estado de dispositivo:         MODE [dispositivo] [/STATUS]
+		*/
+
+		function ModoPuerto(){
+			this.modo = "";
+		}
+
+		/*
+			Definir el Objeto: PuertoPrnCom
+			Desviar impresión:             MODE LPTn[:]=COMm[:]
+		*/
+		
+		function PuertoPrnCom(){
+			this.LPTn = "";
+		}
+		
+		/*
+			Definir el Objeto: ConsolaPais
+			Seleccionar página de códigos: MODE CON[:] CP SELECT=yyy
+		*/
+		
+		function ConsolaPais(){
+			this.select = "";
+		}
+		
+		/*
+			Definir el Objeto: ConsolaEstado
+			Estado de página de códigos:   MODE CON[:] CP [/STATUS]
+		*/
+		
+		function ConsolaEstado(){
+			this.cp = "";
+		}
+		
+		/*
+			Definir el objeto: ConsolaLineas
+			Modo de pantalla:              MODE CON[:] [COLS=c] [LINES=n]
+		*/
+		
+		function ConsolaLineas(){
+			this.cols = "";
+			this.lines = "";
+		}
+		
+		/*
+			Definir el objeto: TecladoVelRep
+			Velocidad del teclado:         MODE CON[:] [RATE=r DELAY=d]
+		*/
+		
+		function funcTecladoVelRep(){
+			this.rate = "";
+			this.delay = "";
+		}
+
+	</script>
+</body>
+</html>

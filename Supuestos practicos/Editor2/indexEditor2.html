@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <title>EditorTextIdExecCommand</title>
+</head>
+<script>
+	function editarFormato(){
+		var negrita = document.getElementById("negrita");
+		var italica = document.getElementById("italica");
+		var subrayado = document.getElementById("subrayado");
+		
+		negrita.onclick = function(){
+			document.execCommand('bold',false,'');
+		}
+		
+		italica.onclick = function(){
+			document.execCommand('italic',false,'');
+		}
+		
+		subrayado.onclick = function(){
+			document.execCommand('underline',false,'');
+		}
+		
+	}
+	
+	function enlazar(){
+		var botonEnlace = document.getElementById("botonEnlace");
+		
+		botonEnlace.onclick = function(){
+			var url = prompt("Escriba la direccion de enlace");
+			if(url){
+				document.execCommand('CreateLink',false,"http://" + url);
+			}
+			
+		}
+	}
+	
+	function mostrarCodigo(){
+		var mostrarCodigo = document.getElementById("mostrarCodigo");
+		mostrarCodigo.onclick = function(){
+			var areaEditable = document.getElementById("areaEditable").innerHTML;
+			areaEditable.replace(/</g,"&lt;");
+			areaEditable.replace(/>/g,"&gt;")
+			alert(areaEditable);
+		}
+	}
+	window.onload = function(){
+		editarFormato();
+		enlazar();
+		mostrarCodigo();
+	}
+
+</script>
+<body>
+
+<form name="supuesto2">
+	<input type="button" onclick="" id="negrita" name="negrita" value="negrita" />
+	<input type="button" onclick="" id="italica" name="italica" value="italica" />
+	<input type="button" onclick="" id="subrayado" name="subrayado" value="subrayado" />
+	<input type="button" onclick="" id="botonEnlace" name="botonEnlace" value="botonEnlace" />
+	<input type="button" onclick="" id="mostrarCodigo" name="mostrarCodigo" value="mostrarCodigo" />
+	
+	<div id="areaEditable" contenteditable="true">
+		<p>
+			Escriba aqui
+		</p>
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.boton {
+	width: 100px;
+	height: 100px;
+	color: red;
+	font-size: 5em;
+}
+
+#contenedor{
+	margin:0 auto;
+	width: 50%;
+	background-color: #ccddff;
+	text-align: center;
+	padding: 50px;
+}

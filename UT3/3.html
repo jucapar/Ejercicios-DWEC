@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>UT3- Ejercicio 3 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+  <script>
+	
+	var texto = prompt("Introduzca una cadena de texto");
+	
+	var palabras = texto.split(" ");
+	var dimension =  palabras.length 
+	document.write("Numero de palabras:" + dimension + "<br />");
+	document.write("Primera palabra:" +  palabras[0] + "<br />");
+	document.write("Ultima palabra:" +  palabras[dimension-1] + "<br />");
+	document.write("Palabras en orden inverso:<br />");
+	
+	for(let i = dimension-1; i>= 0; i--){
+		document.write(palabras[i] + " ");
+	}
+	document.write("<br />");
+	palabras.sort();
+	
+	document.write("Palabras ordenadas de la A a la Z:<br />");
+	
+	for(let i =0;i < dimension; i++){
+		document.write(palabras[i] + " ");
+	}
+	
+	document.write("<br />");
+	palabras.reverse();
+	
+	document.write("Palabras ordenadas de la Z a la A:<br />");
+	
+	for(let i =0;i < dimension; i++){
+		document.write(palabras[i] + " ");
+	}
+	
+  </script>
+  
+</body>
+</html>

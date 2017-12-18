@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+  <title>UT3- Ejercicio 21 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+	<script>
+		
+		
+		try{
+			
+			var divisor = 1000;
+			var dividendo = 0;
+			
+			if(dividendo == 0){
+				throw new Error("Error: No se puede dividir entre 0");
+			}
+			
+			console.log(divisor / dividendo);
+			
+		}catch(e){
+			console.log(e.message);
+		}
+		
+		try{
+			
+			var divisor = 0;
+			var dividendo = 0;
+			
+			if(dividendo == 0 && divisor == 0){
+				throw new Error("Error: Dividendo y divisor son 0");
+			}
+			
+			console.log(divisor / dividendo);
+			
+		}catch(e){
+			console.log(e.message);
+		}
+		
+		try{
+			
+			var divisor = "Hola";
+			var dividendo = 0;
+			
+			if(typeof(divisor) == "string" || typeof(dividendo) == "string"){
+				throw new Error("Error: Esta intentando dividir un numero y una cadena");
+			}
+			
+			console.log(divisor / dividendo);
+			
+		}catch(e){
+			console.log(e.message);
+		}
+		
+		
+		try{
+			
+			var cadena = "";
+			var cadena2 = "Hola";
+			
+			if(isNaN(cadena-cadena2)){
+				throw new Error("Error: Una de las cadenas esta vacia");
+			}
+			
+			
+		}catch(e){
+			console.log(e.message);
+		}
+		
+		try{
+			
+			var divisor = 1000;
+			var dividendo = true;
+			
+			if(typeof(dividendo)=="boolean" || typeof(divisor)=="boolean"){
+				throw new Error("Error: No se puede dividir booleanos");
+			}
+			
+			console.log(divisor / dividendo);
+			
+		}catch(e){
+			console.log(e.message);
+		}
+		
+		try{
+			
+			var cadena = "Hola";
+			var array = new Array();
+			array = cadena
+			
+			console.log(array);
+			
+			
+		}catch(e){
+			console.log(e.message);
+		}
+		
+		
+	</script>
+</body>
+</html>

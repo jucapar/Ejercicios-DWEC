@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 6 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+	<form name="formulario" action="#" method="post" id="formulario">
+			<label for="nombre">Nombre</label><br />
+			<input type="text" name="nombre" id="nombre"  maxlength="15" required/> <br />
+			<p id="texto0"></p><br />
+			
+			<label for="apellido">Apellido</label><br />
+			<input type="text" name="apellido"    maxlength="30" required/><br />
+			<p id="texto1"></p><br />
+			
+			<label for="email">Email</label><br />
+			<input type="email" id="email" name="email"  maxlength="35" required/><br />
+			<p id="texto2"></p><br />
+			
+		
+			
+			<button name="enviar"  id="enviar">Enviar</button>
+	</form>
+	<p id="texto">
+		
+	</p>
+</body>
+<script>
+
+	window.onload = function(){
+		var enviar = document.getElementById("enviar");
+		enviar.addEventListener("click",function(){
+			validar();
+		});
+		
+	}
+	function validar(){
+		var formulario = document.getElementById("formulario");
+		var longitud = formulario.elements.length -1;
+		var arrayErrores = new Array();
+		var error = false;
+		
+		for(let i = 0; i < longitud; i++){
+			if(formulario.elements[i].checkValidity()==false){
+				
+				arrayErrores[i] = formulario.elements[i].validationMessage;
+				
+				error = true;
+			}
+		}
+		if(error){
+			for(let i=0;i<longitud;i++){
+			document.getElementById("texto" + i).innerHTML = "";
+			if(arrayErrores[i] != undefined){
+			
+				document.getElementById("texto" + i).innerHTML = arrayErrores[i].fontcolor("red");
+				
+			}
+			 
+			}
+			
+		}
+		else{
+			formulario.submit();
+		}
+
+		
+		
+	}
+	
+	
+</script>
+</html>

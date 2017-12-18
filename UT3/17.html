@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>UT3- Ejercicio 17 Juan Carlos Pastor Regueras</title>
+</head>
+<body onload="reloj();">
+  
+	<form>
+		<label for="RelojDigital">Reloj</label><br />
+		<input type="text" name="RelojDigital" id="RelojDigital"/>
+	</form> 
+  <script>
+    
+	function reloj(){
+		setInterval(function(){ 
+			actualizarHora();
+		}, 200);
+	}
+	
+	function actualizarHora(){
+		var horas;
+		var minutos;
+		var segundos;
+		var fecha = new Date();
+		
+		if(fecha.getHours() < 10){
+			horas = "0" + fecha.getHours().toString();
+		}
+		else{
+			horas = fecha.getHours().toString();
+		}
+		
+		if(fecha.getMinutes() < 10){
+			minutos = "0" + fecha.getMinutes().toString();
+		}
+		else{
+			minutos = fecha.getMinutes().toString();
+		}
+		
+		if(fecha.getSeconds() < 10){
+			segundos = "0" + fecha.getSeconds().toString();
+		}
+		else{
+			segundos = fecha.getSeconds().toString();
+		}
+		
+		document.getElementById("RelojDigital").value = horas + ":" + minutos + ":" + segundos;
+	}
+	
+  </script>
+  
+ 
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT3- Ejercicio 2 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+  <script>
+	
+	function ordenacionBurbuja(vector) {
+		var n = vector.length;
+		var aux = 0;
+		for (let i = 2; i<= n; i++) {
+			for (let j = 0; j<=(n-i); j++) {
+				
+				if(vector[j] > vector[j+1]){
+					aux = vector[j];
+					vector[j] = vector[j+1];
+					vector[j+1] = aux;
+				}
+			}
+		}
+		
+		
+		
+	}
+	
+	var dimension = parseInt(prompt("Introduzca el tamaño del vector"));
+	var vector = new Array(dimension);
+	for (let i=0; i<dimension;i++){
+		vector[i] = parseInt(prompt("Elemento[" + i + "]:"));
+	}
+	
+	document.write("Vector ordenado:<br />");
+	for (let i=0; i<dimension;i++){
+		document.write(vector[i] + " ");
+	}
+	
+	
+	ordenacionBurbuja(vector);
+	
+	
+	document.write("<br />Vector ordenado:<br />");
+	
+	for (let i=0; i<dimension;i++){
+		document.write(vector[i] + " ");
+	}
+  </script>
+  
+</body>
+</html>
+  

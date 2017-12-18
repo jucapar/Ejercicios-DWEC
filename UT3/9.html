@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UT3- Ejercicio 9 Juan Carlos Pastor Regueras</title>
+</head>
+
+<body>
+    <p>
+        <label for="Entidad">Entidad</label>
+        <label for="Oficina">Oficina</label>
+        <label for="DC">DC</label>
+        <label for="Cuenta">Nº de Cuenta</label>
+    </p>
+    <p>
+        <input type="text" name="Entidad" maxlength="4" size="4" id="Entidad" />
+        <input type="text" name="Oficina" maxlength="4" size="4" id="Oficina" />
+        <input type="text" name="DC"  maxlength="2" size="2" id="DC"/>
+        <input type="text" name="Cuenta" maxlength="10" size="10" id="Cuenta"/><br />    
+    </p>
+
+     <input type="button" onClick="Calcular();" value="Calcular" />
+     
+     <p id="prueba"></p>
+     <script>
+        function Calcular(){
+            var digitoControl1 = 0;
+            var digitoControl2 = 0;
+            var dc;
+            var entidad= document.getElementById("Entidad").value.split("");
+            var oficina = document.getElementById("Oficina").value.split("");
+            var cuenta = document.getElementById("Cuenta").value.split("");
+            
+			var arrayEntidad = [4,8,5,10];
+            var arrayOficina = [9,7,3,6];
+			var arrayCuenta = [1,2,4,8,5,10,9,7,3,6]
+			
+			for(let i= 0;i< arrayEntidad.length;i++){
+				 digitoControl1 += parseInt(entidad[i]) * parseInt(arrayEntidad[i]);
+			}
+			
+			for(let i= 0;i< arrayOficina.length;i++){
+				 digitoControl1 += parseInt(oficina[i]) * parseInt(arrayOficina[i]);
+			}
+          
+            digitoControl1 %= 11;
+            digitoControl1 = 11 -digitoControl1;
+            if(digitoControl1 == 10){
+                digitoControl1 = 1;
+            }
+            
+			for(let i= 0;i< arrayCuenta.length;i++){
+			
+				digitoControl2 += parseInt(cuenta[i]) * parseInt(arrayCuenta[i]);
+			}
+            console.log(digitoControl2);
+            digitoControl2 %= 11;
+            digitoControl2 = 11 -digitoControl2;
+            if(digitoControl2 == 10){
+                digitoControl2 = 1;
+            }
+             console.log(digitoControl2);
+           dc = digitoControl1*10 + digitoControl2;
+           
+           document.getElementById("DC").value = dc;
+             
+        }
+       
+     </script>
+</body>
+
+</html>

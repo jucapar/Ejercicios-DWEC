@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>UT3- Ejercicio 19 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+	<script>
+		
+		function ConfiRed(ip,mascara,puertaEnlace){
+			this.ip = ip;
+			this.mascara = mascara;
+			this.puertaEnlace = puertaEnlace;
+		}
+	
+		ConfiRed.prototype.subredHost = function(){
+			var unos = 0;
+			var ceros = 0;
+			var errorMascara = false;
+			var arrayMascara = this.mascara.split(".");
+			for(let i = 0; i< arrayMascara.length ;i++){
+				arrayMascara[i] = Number(arrayMascara[i]).toString(2);
+			}
+			auxMascara = arrayMascara.join("");
+			
+			while(auxMascara.charAt(unos) != 0){
+				unos++;
+			}
+			for(let i = unos; i< auxMascara.length && !errorMascara ;i++){
+				if(auxMascara.charAt(i) == 0){
+					ceros++;
+				}
+				else{
+					errorMascara = true;
+				}
+			}
+			
+			if(!errorMascara){
+				ceros = 32 - unos;
+				console.log("Host disponibles:" + (Math.pow(2,ceros) - 2));
+			}	
+			else{
+				console.log("Mascara incorrecta");
+			}
+			
+		}
+		var confi = new ConfiRed("192.168.3.102","255.255.255.127","192.168.3.1");
+		confi.subredHost();
+	</script>
+</body>
+	
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>UT2- Ejercicio 12 Juan Carlos Pastor Regueras</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var n1;
+			var n2;
+			var n3;
+            n1=prompt("Introduzca el primer numero");
+            parseInt(n1);
+			
+			n2=prompt("Introduzca el segundo numero");
+            parseInt(n2);
+			
+			n3=prompt("Introduzca el tercero numero");
+            parseInt(n3);
+                
+			var mayor = n1;
+			var posicionMayor = "primero";
+			
+			var menor = n1;
+			var posicionMenor = "primero";
+
+			
+			if(n2 > mayor){
+				mayor = n2;
+				posicionMayor = "segundo";
+				console.log("mayor segundo:" + mayor);
+			}
+			
+			if(n3 > mayor){
+				mayor = n3;
+				posicionMayor = "tercero";
+				console.log("mayor tercero:" + mayor);
+			}
+			
+			if(n2 < menor){
+				menor = n2;
+				posicionMenor = "segundo";
+				console.log("menor segundo:" + menor);
+			}
+			
+			if(n3 < menor){
+				menor = n3;
+				posicionMenor = "tercero";
+				console.log("menor tercero:" + menor);
+			}		
+			
+			document.write("El numero mayor es el " + mayor + " y ocupa la posicion " + posicionMayor + "<br>");
+			document.write("El numero menor es el " + menor + " y ocupa la posicion " + posicionMenor + "<br>");		
+              
+            
+        </script>
+    </body>

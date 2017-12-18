@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>1D</title>
+</head>
+<body>
+  
+  <script>
+	//Declaracion de las matrices
+	const DIMENSION = 2;
+	var MatrizA = new Array(DIMENSION);
+	
+	for(let i = 0; i<DIMENSION; i++){
+		MatrizA[i] = new Array(DIMENSION); 
+	}
+	
+	
+
+	var MatrizB = new Array(DIMENSION);
+	
+	for(let i = 0; i<DIMENSION; i++){
+		MatrizB[i] = new Array(DIMENSION); 
+	}
+	
+	//Rellenar las matrices
+	alert("Matriz A");
+	for(let i = 0; i< DIMENSION; i++){
+		for(let j = 0; j< DIMENSION; j++) {
+			MatrizA[i][j] = prompt("Introduzca el valor de la posicion " + i + " " + j);
+		}
+	}
+	alert("Matriz B");
+	for(let i = 0; i< DIMENSION; i++){
+		for(let j = 0; j< DIMENSION; j++) {
+			MatrizB[i][j] = prompt("Introduzca el valor de la posicion " + i + " " + j);
+		}
+	}
+	
+	
+	for(let i = 0; i< DIMENSION; i++){
+		for(let j = 0; j< DIMENSION; j++) {
+			document.write(MatrizA[i][j] + " ");
+		}
+		
+		document.write("<br />");
+	}
+	
+	for(let i = 0; i< DIMENSION; i++){
+		for(let j = 0; j< DIMENSION; j++) {
+			document.write(MatrizB[i][j] + " ");
+		}
+		
+		document.write("<br />");
+	}
+	
+	var resultado = new Array(DIMENSION);
+	
+	for(let i = 0; i<DIMENSION; i++){
+		resultado[i] = new Array(DIMENSION); 
+	}
+	
+	for(let i = 0; i< DIMENSION; i++){
+		for(let j = 0; j< DIMENSION; j++) {
+		resultado[i][j]= 0;
+			for(let k = 0; k< DIMENSION; k++){
+				
+				resultado[i][j] = resultado[i][j] + (MatrizA[i][k] * MatrizB[k][j]);
+			}
+		
+		}
+	}
+	
+	
+	document.write("Resultado: <br />");	
+	for(let i = 0; i< DIMENSION; i++){
+		for(let j = 0; j< DIMENSION; j++) {
+			document.write(resultado[i][j] + " ");
+		}
+		
+		document.write("<br />");
+	}
+	
+  </script>
+  
+</body>
+</html>
+  
+
+  
+ 
+</body>
+</html>

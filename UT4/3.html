@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 3 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+	<form name="formulario" action="#" method="get" id="formulario"  onsubmit="analizar();" >
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre"/>
+			<label for="apellidos">Apellidos</label>
+			<input type="text" name="apellidos"/>
+			
+			
+			<input type="submit" name="enviar" value="Enviar";/>
+			
+	</form>
+	<div id="texto">
+	
+	</div>
+</body>
+<script>
+	
+	function analizar(){
+		
+		var temp = new Array();
+		temp = document.URL.split("?");
+		var parametros = new Array();
+		var parametros = temp[1].split("&"); 
+		
+		
+		var datos = new Array();
+		
+		for(let i=0;i<parametros.length-1;i++){
+			datos[i] = new Array();
+			datos[i] = parametros[i].split("=");
+			
+		}
+		
+		document.write(datos[0][1]);
+		document.write(datos[1][1]);
+		
+	}
+	
+</script>
+</html>

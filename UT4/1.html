@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 1 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+	<form name="formulario" action="#" method="post" id="formulario" onsubmit="validar();">
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre"/>
+			<label for="apellido">Apellido</label>
+			<input type="text" name="apellido"/>
+			<label for="email">Email</label>
+			<input type="email" name="email"/>
+			<label for="ciudad">Ciudad</label>
+			<input type="text" name="ciudad"/>
+			<label for="pais">Pais</label>
+			<input type="text" name="pais"/>
+			<input type="submit" name="enviar" value="Enviar"/>
+	</form>
+	<div id="texto">
+	
+	</div>
+</body>
+<script>
+	function validar(){
+			var longitud = document.forms.formulario.elements.length-1;
+			var formulario = document.forms.formulario;
+			for(let i = 0; i<longitud;i++){
+				//document.write(formulario.elements[i].value);
+				
+				if(formulario.elements[i].value.length<3){
+					document.write("Error: El campo " + formulario.elements[i].name + " no es valido<br />");
+				}
+			}
+			
+			
+	}
+</script>
+</html>
+

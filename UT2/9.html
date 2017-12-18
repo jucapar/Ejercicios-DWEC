@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>UT2- Ejercicio 9 Juan Carlos Pastor Regueras</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var n;
+			var n2;
+			
+                n=prompt("Introduzca numero");
+				n2=prompt("Introduzca segundo numero");
+                parseInt(n);
+				parseInt(n2);
+                
+		
+				var divisores1 = new Array();
+				var divisores2 = new Array();
+				var indice1 = 0;
+				var indice2 = 0;
+				
+				for(let i=0; i<= n/2;i++){
+				console.log("Entro al primer for");
+					if(n%i == 0){
+						divisores1[indice1] = i;
+						indice1++;
+					}
+				}
+				divisores1[indice1] = n;
+				
+				for(let i=0; i<= n2/2;i++){
+				console.log("Entro al segundo  for");
+					if(n2%i == 0){
+						divisores2[indice2] = i;
+						indice2++;
+					}
+				}
+				
+				divisores2[indice2] = n2;
+				
+				document.write("<h2>Divisores de n</h2>");
+				for (let i= 0; i<divisores1.length ;i++){
+				console.log("Entro al tercer for");	
+					document.write(divisores1[i]);
+					document.write("<br>");
+				}
+				
+				
+				document.write("<h2>Divisores de n2</h2>");
+				for (let i= 0; i<divisores2.length ;i++){
+				console.log("Entro al cuarto for");
+					document.write(divisores2[i]); 
+					document.write("<br>"); 
+				} 
+				
+				for (let i= 0; i<divisores1.length ;i++){
+					for (let j= 0; j<divisores2.length ;j++){
+						if(divisores1[i]==divisores2[j]){
+							document.write("Divisor comun:" + divisores1[i] + "<br>");
+						}
+					} 
+				}
+				
+				
+        </script>
+    </body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 2 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+	<form name="formulario" action="#" method="post" id="formulario" >
+			<label for="nombre">Nombre y apellidos</label>
+			<input type="text" name="nombre"/>
+			<select>
+				<option value="-">-</option>
+				<option value="1º">1º</option>
+				<option value="2º">2º</option>
+				<option value="3º">3º</option>
+				<option value="3º">4º</option>
+			</select>
+			<label for="anyo">Año</label>
+			<input type="date" name="anyo"/>
+			<input type="submit" name="enviar" value="Enviar" onclick="validar();"/>
+			
+	</form>
+	<div id="texto">
+	
+	</div>
+</body>
+<script>
+	function validar(){
+			var longitud = document.forms.formulario.elements.length-1;
+			var formulario = document.forms.formulario;
+			
+			var hoy= new Date();
+			var fechaform=new Date(formulario.elements[2].value);
+			console.log(fechaform);
+			console.log(hoy);
+		
+			if(formulario.elements[1].value=="3º" || formulario.elements[1].value=="4º"){
+				document.write("Valor no admitido");
+			}
+			
+			if(fechaform>hoy){
+				document.write("fecha no valida");
+			}
+			
+	}
+	
+	
+</script>
+</html>

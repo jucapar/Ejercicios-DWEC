@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UT3- Ejercicio 10 Juan Carlos Pastor Regueras</title>
+</head>
+
+<body>
+    
+     <p>
+        <label for="CodigoPais">Codigo Pais</label>
+        <label for="DigitoControl">Digito Control</label>
+        <label for="Entidad">Entidad</label>
+        <label for="Oficina">Oficina</label>
+        <label for="DC">DC</label>
+        <label for="Cuenta">Nº de Cuenta</label>
+    </p>
+    <p>
+        <input type="text" name="Codigo Pais" maxlength="2" size="2" id="CodigoPais" />
+        <input type="text" name="Digito Control" maxlength="2" size="2" id="DigitoControl" />
+        <input type="text" name="Entidad" maxlength="4" size="4" id="Entidad" />
+        <input type="text" name="Oficina" maxlength="4" size="4" id="Oficina" />
+        <input type="text" name="DC"  maxlength="2" size="2" id="DC"/>
+        <input type="text" name="Cuenta" maxlength="10" size="10" id="Cuenta"/><br />    
+    </p>
+
+     <input type="button" onClick="IBAN();" value="Calcular IBAN" />
+     
+     <script>
+        function IBAN(){
+            
+            var entidad= document.getElementById("Entidad").value.split("");
+            var oficina = document.getElementById("Oficina").value.split("");
+            var dc = document.getElementById("DC").value.split("");
+            var cuenta = document.getElementById("Cuenta").value.split("");
+            var codigoPais = document.getElementById("CodigoPais").value.split("");
+            var digitoControl = document.getElementById("DigitoControl").value.split("");
+            
+            
+            var total = entidad.concat(oficina,dc,cuenta,codigoPais,digitoControl);
+			
+            var peso1 = PesoIBAN(total[20]);
+            var peso2 = PesoIBAN(total[21]);
+			total.splice(20,2,parseInt(peso1/10),parseInt(peso1% 10),parseInt(peso2/10),parseInt(peso2% 10));
+            var parte1 = total.slice(0,13);
+			var parte2 = total.slice(13);
+			
+			var resto1 = parseInt(parte1.join("")) % 97;
+			parte2.unshift(parseInt(resto1/10),resto1%10);
+			var numero = parseInt(parte2.join(""));
+			var modulo = parseInt(numero) % 97;
+            modulo = 98-modulo;
+			console.log(modulo);
+            document.getElementById("DigitoControl").value = modulo;
+			
+        }
+        
+        function PesoIBAN(letra) {
+            var peso = "";
+            letra = letra.toUpperCase();
+            switch (letra) {
+            case 'A':
+                peso = "10";
+            break;
+            case 'B':
+                peso = "11";
+            break;
+            case 'C':
+                peso = "12";
+            break;
+            case 'D':
+                peso = "13";
+            break;
+            case 'E':
+                peso = "14";
+            break;
+            case 'F':
+                peso = "15";
+            break;
+            case 'G':
+                peso = "16";
+            break;
+            case 'H':
+                peso = "17";
+            break;
+            case 'I':
+                peso = "18";
+            break;
+            case 'J':
+                peso = "19";
+            break;
+            case 'K':
+                peso = "20";
+            break;
+            case 'L':
+                peso = "21";
+            break;
+            case 'M':
+                peso = "22";
+            break;
+            case 'N':
+                peso = "23";
+            break;
+            case 'O':
+                peso = "24";
+            break;
+            case 'P':
+                peso = "25";
+            break;
+            case 'Q':
+                peso = "26";
+            break;
+            case 'R':
+                peso = "27";
+            break;
+            case 'S':
+                peso = "28";
+            break;
+            case 'T':
+                peso = "29";
+            break;
+            case 'U':
+                peso = "30";
+            break;
+            case 'V':
+                peso = "31";
+            break;
+            case 'W':
+                peso = "32";
+            break;
+            case 'X':
+                peso = "33";
+            break;
+            case 'Y':
+                peso = "34";
+            break;
+            case 'Z':
+                peso = "35";
+            break;
+        }
+        return peso;
+      }
+     </script>
+    
+</body>
+
+</html>

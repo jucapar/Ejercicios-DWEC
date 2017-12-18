@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 10 Juan Carlos Pastor Regueras</title>
+</head>
+
+<body>
+
+	<form id="formulario">
+	
+		Numero de tarjeta:<br />
+		<input type="text" name="numTarjeta" id="numTarjeta" />
+		<br />
+		
+		<input type="button" value="Validar" name="Validar" id="Validar" />
+		
+	</form>
+	<p id="texto">
+	
+	</p>
+    <script>
+	
+		window.onload = function(){
+			var boton = document.getElementById("Validar");
+			boton.addEventListener("click",encontrarDigito);
+		}
+        function encontrarDigito(evt){
+			var numTarjeta = document.getElementById("numTarjeta").value;
+			var ArrayNumTarjeta = numTarjeta.split("");
+			var posicionX;
+			var A = 0;
+			var B = 0;
+			
+			for(let i = 0; i < ArrayNumTarjeta.length; i=i+2){
+				if(ArrayNumTarjeta[i] == "X"){
+					posicionX = i;
+				}
+				else{
+					A += unDigito(ArrayNumTarjeta[i]*2);
+				}
+			}
+			
+			for(let j = 1; j < ArrayNumTarjeta.length; j=j+2){
+				if(ArrayNumTarjeta[j] == "X"){
+					posicionX = j;
+				}
+				else{
+					B += parseInt(ArrayNumTarjeta[j]);
+				}
+			}
+			
+			
+		}
+       
+	   function unDigito(num){
+			return parseInt(num/10) + num % 10;
+	   }
+	   
+	  
+    </script>    
+</body>
+
+</html>

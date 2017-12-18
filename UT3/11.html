@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UT3- Ejercicio 11 Juan Carlos Pastor Regueras</title>
+</head>
+
+<body>
+    <script>
+        var frase = prompt("Introduzca una frase");
+        
+        var palabras = frase.split(" ");
+		var letras = frase.split("");
+		
+		var numeroPalabras = palabras.length;
+		var numeroLetras = letras.length;
+		var numeroPuntos = 0;
+		var numeroComas = 0;
+		var numeroVocales = 0;
+		var numeroMayusculas = 0;
+		for(let i = 0; i<numeroLetras;i++){
+			
+			
+			switch(letras[i]){
+				case 'A':
+				case 'a':
+				case 'E':
+				case 'e':
+				case 'I':
+				case 'i':
+				case 'O':
+				case 'o':
+				case 'U':
+				case 'u':
+					numeroVocales++;
+				break;
+				
+				case ".":
+					numeroPuntos++;
+				break;
+				
+				case ",":
+					numeroComas++;
+				break;
+			}
+			
+			if(letras[i]==letras[i].toUpperCase()){
+				numeroMayusculas++;
+			}
+		}
+		
+		document.write("Numero de palabras: " + numeroPalabras + "<br />");
+		document.write("Numero de caracteres: " + numeroLetras + "<br />");
+		document.write("Numero de vocales: " + numeroVocales + "<br />");
+		document.write("Numero de puntos: " + numeroPuntos + "<br />");
+		document.write("Numero de comas: " + numeroComas + "<br />");
+    </script>
+    
+</body>
+
+</html>

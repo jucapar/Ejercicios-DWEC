@@ -1,0 +1,42 @@
+<html>
+    <head>
+        		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title> UT2- Ejercicio 5 Juan Carlos Pastor Regueras</title>
+    </head>
+    <body>
+       
+			 <script>
+						var text = prompt("Escribe una frase");
+            var nText = text.length;
+            var vocales = "";
+
+            for (let i = 0; i < nText; i++) {
+
+                switch (text.charAt(i)) {
+
+                    case "a":
+                    case "e":
+                    case "i":
+                    case "o":
+                    case "u":
+                    case "A":
+                    case "E":
+                    case "I":
+                    case "O":
+                    case "U":
+                        vocales += text.charAt(i);
+                        break;
+
+
+                }
+
+            }
+            
+            alert ("vocales :" + vocales);
+		 
+			 </script>
+					
+			
+        
+    </body>
+</html>

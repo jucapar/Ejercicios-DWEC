@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<title>Formulario generado mediante Javascript</title>
+<script>
+	window.onload = function(){
+	
+		
+		var form = document.createElement("FORM");
+		form.setAttribute("id","formulario");
+		var input = document.createElement("input");
+		var label = document.createElement("label");
+		label.setAttribute("for","nombre");
+		label.innerHTML = "Nombre";
+		input.setAttribute("type","text");
+		input.setAttribute("id","nombre");
+		input.setAttribute("name","nombre");
+		input.setAttribute("value","");
+		form.appendChild(label);
+		form.appendChild(input);
+		document.body.appendChild(form);
+	}
+
+</script>
+<body>
+		
+		
+</body>
+
+
+</html>

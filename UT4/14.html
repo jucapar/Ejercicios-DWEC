@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 14 Juan Carlos Pastor Regueras</title>
+</head>
+	
+    <body>
+		
+	
+		
+		      
+    </body>
+	<script>
+	
+		var formularioA = document.createElement("form");
+		formularioA.setAttribute("method","get");
+		document.body.appendChild(formularioA);
+		
+		var label1 = document.createElement("label");
+		label1.setAttribute("for","usuario");
+		label1.innerHTML="Usuario: ";
+		formularioA.appendChild(label1);
+		
+		var usuario= document.createElement("input");
+		usuario.setAttribute("type","text");
+		usuario.setAttribute("name","usuario");
+		formularioA.appendChild(usuario);
+		
+		var label2 = document.createElement("label");
+		label2.innerHTML="Clave encriptada: ";
+		formularioA.appendChild(label2);
+		
+		var keygen = document.createElement("keygen");
+		keygen.setAttribute("name","clavepub");
+		keygen.setAttribute("challenge","serie");
+		
+		var password= document.createElement("input");
+		password.setAttribute("type","submit");
+		password.setAttribute("name","security");
+		formularioA.appendChild(password);
+		
+		var formularioB = document.createElement("form");
+		formularioA.setAttribute("onsubmit","return false");
+		formularioA.setAttribute("oninput","res,value = parseInt(op1.value) * parseInt(op2.value) * parseInt(op3.value)");
+		document.body.appendChild(formularioB);
+		
+		var op1 = document.createElement("input");
+		op1.setAttribute("name","op1");
+		op1.setAttribute("type","number");
+		op1.setAttribute("step","any");
+		formularioB.appendChild(op1);
+		
+		var x1 = document.createTextNode("X");
+		formularioB.appendChild(x1);
+		
+		var op2 = document.createElement("input");
+		op2.setAttribute("name","op2");
+		op2.setAttribute("type","number");
+		op2.setAttribute("step","any");
+		formularioB.appendChild(op2);
+		
+		var x2 = document.createTextNode("X");
+		formularioB.appendChild(x2);
+		
+		var op3 = document.createElement("input");
+		op3.setAttribute("name","op2");
+		op3.setAttribute("type","number");
+		op3.setAttribute("step","any");
+		formularioB.appendChild(op3);
+		
+		var igual = document.createTextNode("=");
+		formularioB.appendChild(igual);
+		
+		var res = document.createElement("output");
+		res.setAttribute("name","res");
+		res.setAttribute("for","op1 op2 op3");
+		formularioB.appendChild(res);
+		
+		var formularioC = document.createElement("form");
+		formularioC.setAttribute("onsubmit","return false");
+		document.body.appendChild(formularioC);
+		
+		var label4 = document.createElement("label");
+		label4.innerHTML = "Selecciona tu pais:";
+		formularioC.appendChild(label4);
+		
+		var paises= document.createElement("input");
+		paises.setAttribute("type","text");
+		paises.setAttribute("name","pais");
+		paises.setAttribute("id","pais");
+		paises.setAttribute("list","paises");
+		formularioC.appendChild(paises);
+		
+		var lista = document.createElement("datalist");
+		lista.setAttribute("id","paises");
+		formularioC.appendChild(lista);
+		
+		var opcion1 = document.createElement("option");
+		opcion1.setAttribute("value","España");
+		lista.appendChild(opcion1);
+		
+		var opcion2 = document.createElement("option");
+		opcion2.setAttribute("value","Mexico");
+		lista.appendChild(opcion2);
+		
+		var opcion3 = document.createElement("option");
+		opcion3.setAttribute("value","Argentina");
+		lista.appendChild(opcion3);
+		
+		var opcion4 = document.createElement("option");
+		opcion4.setAttribute("value","Peru");
+		lista.appendChild(opcion4);
+		
+		var opcion5 = document.createElement("option");
+		opcion5.setAttribute("value","Colombia");
+		lista.appendChild(opcion5);
+		
+		var opcion6 = document.createElement("option");
+		opcion6.setAttribute("value","Otro pais");
+		lista.appendChild(opcion6);
+		
+	</script>
+</html>

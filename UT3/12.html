@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>UT3- Ejercicio 12 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+  <script>
+    var arrayNumeros = new Array();
+	function intercambio (){
+		var aux=0;
+		aux=arrayNumeros[0]
+		arrayNumeros[0]=arrayNumeros[1];
+		arrayNumeros[1]=aux;			
+	}
+	
+	
+	arrayNumeros[0]=prompt("Introduzca n1");
+	arrayNumeros[1]=prompt("Introduzca n2");
+		
+	document.write("Valor n1:" + arrayNumeros[0] + "<br />");
+	document.write("Valor n2:" + arrayNumeros[1] + "<br />");
+	intercambio(arrayNumeros[0],arrayNumeros[1]);
+	document.write("Despues de intercambiar<br />");
+	document.write("Valor n1:" + arrayNumeros[0] + "<br />");
+	document.write("Valor n2:" + arrayNumeros[1] + "<br />");
+	
+  </script>
+  
+ 
+</body>
+</html>

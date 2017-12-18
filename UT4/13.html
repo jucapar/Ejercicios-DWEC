@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>UT4- Ejercicio 13 Juan Carlos Pastor Regueras</title>
+</head>
+	
+    <body>
+		
+	
+		
+		      
+    </body>
+	<script>
+	
+		
+		
+		var formulario = document.createElement("form");
+		formulario.setAttribute("method","post");
+		formulario.setAttribute("action","tratamiento.php");
+		document.body.appendChild(formulario);
+		
+		var p = document.createElement("p");
+		p.innerHTML="Marcas de comida que te gustan";
+		formulario.appendChild(p);
+		
+		var br = document.createElement("br");
+		formulario.appendChild(br);
+		
+		var label1 = document.createElement("label");
+		label1.setAttribute("for","patatas");
+		label1.innerHTML="Patatas fritas: ";
+		formulario.appendChild(label1);
+		
+		
+		
+		var patatas= document.createElement("input");
+		patatas.setAttribute("type","checkbox");
+		patatas.setAttribute("name","patatas");
+		patatas.setAttribute("id","patatas");
+		formulario.appendChild(patatas);
+		
+		var br1 = document.createElement("br");
+		formulario.appendChild(br1);
+		
+		var label2 = document.createElement("label");
+		label2.setAttribute("for","hamburguesa");
+		label2.innerHTML="hamburguesa: ";
+		formulario.appendChild(label2);
+		
+		var hamburguesa= document.createElement("input");
+		hamburguesa.setAttribute("type","checkbox");
+		hamburguesa.setAttribute("name","hamburguesa");
+		formulario.appendChild(hamburguesa);
+		
+		var br2 = document.createElement("br");
+		formulario.appendChild(br2);
+		
+		var label3 = document.createElement("label");
+		label3.setAttribute("for","espinacas");
+		label3.innerHTML="Espinacas: ";
+		formulario.appendChild(label3);
+		
+		var espinacas= document.createElement("input");
+		espinacas.setAttribute("type","checkbox");
+		espinacas.setAttribute("name","espinacas");
+		formulario.appendChild(espinacas);
+		
+		var br3 = document.createElement("br");
+		formulario.appendChild(br3);
+		
+		var label4 = document.createElement("label");
+		label4.setAttribute("for","ostras");
+		label4.innerHTML="Ostras: ";
+		formulario.appendChild(label4);
+		
+			var ostras= document.createElement("input");
+		ostras.setAttribute("type","checkbox");
+		ostras.setAttribute("name","ostras");
+		formulario.appendChild(ostras);
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

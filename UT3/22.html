@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+  <title>UT3- Ejercicio 22 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+	<script>
+		var array = ["alumnos", "profesores", "aulas", "mesas", "sillas", "pizarras"];
+		if(5 in array){
+			console.log(array[5]);
+		}else{
+			console.log("La posicion no existe");
+		}
+		
+		if(typeof(0 in array) == "string"){
+			console.log("Es una cadena");
+		}else{
+			console.log("No es una cadena");
+		}
+		
+		console.log(20 in array);
+	</script>
+</body>
+</html>

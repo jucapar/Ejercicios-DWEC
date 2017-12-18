@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>UT3- Ejercicio 13 Juan Carlos Pastor Regueras</title>
+</head>
+<body>
+  
+  <script>
+    
+	function tipoNumero(num){
+	
+		if(!isNaN(numero)){
+			if(num > 0){
+				document.write("Es un numero positivo");
+			}
+			else if(num < 0){
+				document.write("Es un numero negativo");
+			}
+			else{
+				document.write("Es nulo");
+			}
+		}else{
+			document.write("No es un numero");
+		}
+		
+	}
+	
+	var numero = prompt("Introduzca un numero");
+	tipoNumero(numero);
+	
+  </script>
+  
+ 
+</body>
+</html>
